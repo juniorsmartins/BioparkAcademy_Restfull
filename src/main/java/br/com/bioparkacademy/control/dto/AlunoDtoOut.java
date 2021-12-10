@@ -2,8 +2,7 @@ package br.com.bioparkacademy.control.dto;
 
 import br.com.bioparkacademy.model.Aluno;
 import br.com.bioparkacademy.model.StatusMatricula;
-import java.util.List;
-import java.util.stream.Collectors;
+import org.springframework.data.domain.Page;
 
 /**
  * @author JuniorMartins
@@ -19,7 +18,7 @@ public class AlunoDtoOut
 
     // -------------------- CONSTRUTORES -------------------- //
     public AlunoDtoOut(Aluno aluno)
-    {   // De fato, a conversao de Aluno em AlunoDto ocorre aqui no construtor. O método converter apenas instancia e coleta
+    {   // De fato, a conversao de Aluno em AlunoDto ocorre aqui no construtor
         id = aluno.getId();
         nome = aluno.getNome();
         cpf = aluno.getCpf();
@@ -28,11 +27,11 @@ public class AlunoDtoOut
     }
     
     // -------------------- MÉTODOS AUXILIARES -------------------- //
-    public static List<AlunoDtoOut> converter(List<Aluno> alunos)
-    {return alunos.stream().map(AlunoDtoOut::new).collect(Collectors.toList());} // Funcional/STREAM para converter Aluno em AlunoDto
-    
+    public static Page<AlunoDtoOut> converter(Page<Aluno> alunos)
+    {return alunos.map(AlunoDtoOut::new);}
+
     // -------------------- MÉTODOS DE ACESSO -------------------- //
-    public Long getId()
+    public Long getId() 
     {return id;}
     public String getNome() 
     {return nome;}
@@ -42,9 +41,6 @@ public class AlunoDtoOut
     {return dataNascimento;}
     public StatusMatricula getStatusMatricula() 
     {return statusMatricula;}
-
-    
-    
 
     
 }

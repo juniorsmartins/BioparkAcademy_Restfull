@@ -5,11 +5,15 @@ import br.com.bioparkacademy.control.dto.AlunoDtoIn;
 import br.com.bioparkacademy.model.Aluno;
 import br.com.bioparkacademy.repository.AlunoRepository;
 import java.net.URI;
-import java.util.List;
-import java.util.Optional;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +22,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -35,11 +40,18 @@ public class AlunoController
     // -------------------- MÉTODOS CONTROLADORES -------------------- //
     // ----- CONSULTAR -----
     @GetMapping("/consultar")
-    public List<AlunoDtoOut> consultarAlunos(String dataNascimento)
+    @Cacheable(value = "consultarAlunos") 
+    public Page<AlunoDtoOut> consultarAlunos(@RequestParam(required = false) String dataNascimento, 
+            @PageableDefault(sort = "id", direction = Sort.Direction.DESC, page = 0, size = 5) Pageable paginacao) // paginação com opção de padrão default
     {
         if(dataNascimento != null)
-            return AlunoDtoOut.converter(alunoRepository.findByDataNascimento(dataNascimento)); // busca seletiva
-        return AlunoDtoOut.converter(alunoRepository.findAll()); // buscar todos
+        {
+            Page<Aluno> alunos = alunoRepository.findByDataNascimento(dataNascimento, paginacao); // Busca seletiva com paginacao
+            return AlunoDtoOut.converter(alunos);
+        }
+        
+        Page<Aluno> alunos = alunoRepository.findAll(paginacao); // Busca todos com paginacao
+        return AlunoDtoOut.converter(alunos);
     }
 
     @GetMapping("/consultar/{id}")
@@ -56,6 +68,7 @@ public class AlunoController
     // ----- CADASTRAR -----
     @PostMapping("/cadastrar")
     @Transactional
+    @CacheEvict(value = "consultarAlunos", allEntries = true)
     public ResponseEntity<AlunoDtoOut> cadastrarAluno(@RequestBody @Valid AlunoDtoIn alunoDtoIn, 
             UriComponentsBuilder uriComponentsBuilder)
     {
@@ -69,6 +82,7 @@ public class AlunoController
     // ----- ATUALIZAR -----
     @PutMapping("/atualizar/{id}")
     @Transactional
+    @CacheEvict(value = "consultarAlunos", allEntries = true)
     public ResponseEntity<AlunoDtoOut> atualizarAluno(@PathVariable Long id, @RequestBody @Valid AlunoDtoIn alunoDtoIn)
     {
         var aluno = alunoRepository.findById(id);
@@ -82,6 +96,7 @@ public class AlunoController
     // ----- DELETAR -----
     @DeleteMapping("/deletar/{id}")
     @Transactional
+    @CacheEvict(value = "consultarAlunos", allEntries = true)
     public ResponseEntity<?> removerAluno(@PathVariable Long id)
     {
         if(!alunoRepository.existsById(id))
