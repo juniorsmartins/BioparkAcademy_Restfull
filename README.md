@@ -33,7 +33,7 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 * Linguagem de programação: Java;
 * Framework: Spring (Boot, Web, Data Jpa, Validation, Cache e DevTools);
 * Banco de Dados: H2 em desenvolvimento e PostgreSql em produção;
-* IDE e outros: NetBeans, Postman e GitHub;
+* IDE e outros: NetBeans, Postman, Swagger e GitHub;
 
 ## 
 
