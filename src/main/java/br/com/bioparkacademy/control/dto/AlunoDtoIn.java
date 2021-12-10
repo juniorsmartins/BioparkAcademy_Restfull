@@ -24,6 +24,14 @@ public class AlunoDtoIn
     // -------------------- MÉTODOS AUXILIARES -------------------- //
     public Aluno converter()
     {return new Aluno(nome, cpf, dataNascimento);}
+    
+    public Aluno atualizar(Aluno aluno)
+    {
+        aluno.setNome(nome);
+        aluno.setCpf(cpf);
+        aluno.setDataNascimento(dataNascimento);
+        return aluno;
+    }
 
     // -------------------- MÉTODOS DE ACESSO E MODIFICAÇÃO -------------------- //
     public String getNome() 
