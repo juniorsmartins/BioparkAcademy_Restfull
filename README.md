@@ -11,7 +11,10 @@ Para mais informações sobre o Biopark: https://www.biopark.com.br/
 1. Síntese;
 2. Requisitos Mínimos;
 3. Tecnologias;
-4. Endpoints;
+4. Controller e Endpoints;
+5. Entidades;
+6. Data Transfer Object - DTO;
+7. Database;
 
 ## 1. SÍNTESE
 
@@ -52,7 +55,9 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 - Mundialmente popular;
 - Comunidade atuante na confecção de materiais de estudo, palestras, eventos e cursos;
 
-## 4. ENDPOINTS
+## 4. CONTROLLER E ENDPOINTS
+
+- AlunoController: todos os endpoints foram construídos dentro da classe de controle de Aluno. Neste caso, do 'desafio tech', por uma questão de praticidade e simplicidade, optei por não criar uma camada de serviços para abarcar as lógicas e relações com a infraestrutura (database). Logo, mantive tudo centralizado na camada de controlle.
 
 ### Verbos e Endpoints
 
@@ -84,4 +89,20 @@ Efetua a atualização cadastral, por meio do ID, de um aluno presente na base d
 - DELETE - /alunos/v1/deletar/{id}
 
 Remove um aluno, por meio do ID, da base de dados. Também há resposta padronizada para IDs inexistentes.
+
+## 5. ENTIDADES
+
+- Aluno: id, nome, CPF, dataNascimento, dataCadastro e statusMatricula;
+
+## 6. DATA TRANSFER OBJECT - DTO
+
+- AlunoDtoIn:
+- AlunoDtoOut:
+
+## 7. DATABASE
+
+- H2: 
+- PostgreSQL: 
+
+
 
