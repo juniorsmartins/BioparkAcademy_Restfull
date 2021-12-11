@@ -1,7 +1,6 @@
 package br.com.bioparkacademy.model;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,8 +12,8 @@ import javax.persistence.Table;
  * @author JuniorMartins
  */
 @Entity
-@Table(name = "alunos")
-public class Aluno implements Serializable
+@Table(name = "cursos")
+public class Curso implements Serializable
 {
     // -------------------- ATRIBUTOS DE CLASSE -------------------- //
     public static final long serialVersionUID = 1l;
@@ -25,19 +24,17 @@ public class Aluno implements Serializable
     @Column
     private String nome;
     @Column
-    private String cpf;
+    private int cargaHoraria;
     @Column
-    private String dataNascimento;
-    @Column
-    private LocalDateTime dataCadastro = LocalDateTime.now();
-   
+    private double preco;
+    
     // -------------------- CONSTRUTORES -------------------- //
-    public Aluno(){}
-    public Aluno(String nome, String cpf, String dataNascimento) 
+    public Curso(){}
+    public Curso(String nome, int cargaHoraria, double preco) 
     {
         this.nome = nome;
-        this.cpf = cpf;
-        this.dataNascimento = dataNascimento;
+        this.cargaHoraria = cargaHoraria;
+        this.preco = preco;
     }
     
     // -------------------- MÉTODOS DE ACESSO E MODIFICAÇÃO -------------------- //
@@ -49,21 +46,20 @@ public class Aluno implements Serializable
     {return nome;}
     public void setNome(String nome) 
     {this.nome = nome;}
-    public String getCpf() 
-    {return cpf;}
-    public void setCpf(String cpf) 
-    {this.cpf = cpf;}
-    public String getDataNascimento() 
-    {return dataNascimento;}
-    public void setDataNascimento(String dataNascimento) 
-    {this.dataNascimento = dataNascimento;}
-    public LocalDateTime getDataCadastro() 
-    {return dataCadastro;}
-    public void setDataCadastro(LocalDateTime dataCadastro) 
-    {this.dataCadastro = dataCadastro;}
-  
+    public int getCargaHoraria() 
+    {return cargaHoraria;}
+    public void setCargaHoraria(int cargaHoraria) 
+    {this.cargaHoraria = cargaHoraria;}
+    public double getPreco() 
+    {return preco;}
+    public void setPreco(double preco) 
+    {this.preco = preco;}
     
-    
+
 }
+
+
+
+
 
 

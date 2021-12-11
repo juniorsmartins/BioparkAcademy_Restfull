@@ -1,7 +1,6 @@
 package br.com.bioparkacademy.control.dto;
 
 import br.com.bioparkacademy.model.Aluno;
-import br.com.bioparkacademy.model.StatusMatricula;
 import java.time.LocalDateTime;
 import org.springframework.data.domain.Page;
 
@@ -16,7 +15,6 @@ public class AlunoDtoOut
     private String cpf;
     private String dataNascimento;
     private LocalDateTime dataCadastro;
-    private StatusMatricula statusMatricula;
 
     // -------------------- CONSTRUTORES -------------------- //
     public AlunoDtoOut(Aluno aluno)
@@ -26,14 +24,13 @@ public class AlunoDtoOut
         cpf = aluno.getCpf();
         dataNascimento = aluno.getDataNascimento();
         dataCadastro = aluno.getDataCadastro();
-        statusMatricula = aluno.getStatusMatricula();
     }
     
     // -------------------- MÉTODOS AUXILIARES -------------------- //
     public static Page<AlunoDtoOut> converter(Page<Aluno> alunos)
     {return alunos.map(AlunoDtoOut::new);}
 
-    // -------------------- MÉTODOS DE ACESSO -------------------- //
+    // -------------------- MÉTODOS DE ACESSO E MODIFICAÇÃO -------------------- //
     public Long getId() 
     {return id;}
     public String getNome() 
@@ -44,8 +41,16 @@ public class AlunoDtoOut
     {return dataNascimento;}
     public LocalDateTime getDataCadastro()
     {return dataCadastro;}
-    public StatusMatricula getStatusMatricula() 
-    {return statusMatricula;}
+    public void setId(Long id) 
+    {this.id = id;}
+    public void setNome(String nome) 
+    {this.nome = nome;}
+    public void setCpf(String cpf) 
+    {this.cpf = cpf;}
+    public void setDataNascimento(String dataNascimento) 
+    {this.dataNascimento = dataNascimento;}
+    public void setDataCadastro(LocalDateTime dataCadastro) 
+    {this.dataCadastro = dataCadastro;}
 
     
 }
