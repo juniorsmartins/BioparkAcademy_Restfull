@@ -16,6 +16,7 @@ Para mais informações sobre o Biopark: https://www.biopark.com.br/
 6. Entidades;
 7. Data Transfer Object - DTO;
 8. Database;
+9. Guia de teste;
 
 ## 1. SÍNTESE
 
@@ -137,7 +138,7 @@ Os DTOs são um padrão usado para transportar dados entre subsistemas de um sof
 - H2: utilizei banco de dados em memória para todo o processo de desenvolvimento da API Rest.
 - PostgreSQL: incluído apenas na fase final do desenvolvimento.
 
-## 9. GUIA DE COMO TESTAR
+## 9. GUIA DE TESTE
 
 1. 
 2. 
@@ -147,6 +148,7 @@ Testes para consultar Alunos:
 - GET - http://localhost:8080/alunos/v1/consultar?page=1&size=4&sort=id,asc
 - GET - http://localhost:8080/alunos/v1/consultar/2
 - POST - http://localhost:8080/alunos/v1/cadastrar
+var useEsteJson = 
 {
     "nome":"Manoel Calabrim",
     "cpf":"109.415.110-65",
@@ -154,6 +156,7 @@ Testes para consultar Alunos:
 }
 Testar para atualizar Alunos:
 - PUT - http://localhost:8080/alunos/v1/atualizar/15
+var useEsteJson =
 {
     "nome":"Pablo Avatar",
     "cpf":"102.423.590-43",
