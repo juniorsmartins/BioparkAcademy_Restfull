@@ -23,7 +23,7 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 * Linguagens: preferência por Java, Python ou JavaScript, mas pode ser qualquer outra condicionado a explicação do motivo da escolha;
 * Banco de dados: utilizar MySql ou PostgreSql;
 * Banco de dados e tabelas: a criação do banco e das tabelas fica a critério do candidato, seja via script ou aplicação;
-* APIs: devem seguir o modelo Restfull com formato Json;
+* APIs: devem seguir o modelo Restful com formato Json;
 * Seguir as boas práticas de programação.
 * Envio: o desafio deve ser enviado preferencialmente como repositório Git público (Github, Gitlab ou Bitbucket), com commits pequenos e bem descritos. Ou enviado como arquivo compactado (Zip ou Tar);
 * O repositório deve estar com modelo de licença de código aberto.
@@ -42,11 +42,13 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 * Multi-threaded - capacidade de suportar processamentos múltiplos;
 * Gratuidade - linguagem e ambientes de produção gratuitos;
 * Internacionalização - suporta nativamente caracteres Unicode;
+* Elegância, organização e formalidade do código;
 * Multiparadigma;
-* Vasta biblioteca de rotinas e APIs
+* Vasta biblioteca de rotinas e APIs;
+* Variedade de frameworks;
 * A máquina virtual Java roda diversas outras linguagens;
 * Mercado amplo e aquecido;
-* Variedade de frameworks;
+* Mundialmente popular;
 * Comunidade atuante na confecção de materiais de estudo, palestras, eventos e cursos;
 
 ## 4 - ENDPOINTS
@@ -59,8 +61,26 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 * PUT - /alunos/v1/atualizar/{id}
 * DELETE - /alunos/v1/deletar/{id}
 
+### Descritivos dos Endpoints
 
+* GET - /alunos/v1/consultar
 
+- Requisita alunos com paginação: retorna todos os alunos por paginação customizada ou padrão. Você pode inserir os detalhes de paginação ou, no caso de não inserir, retornará todos os alunos paginados pela paginação padrão (pré-definida no código). 
+- Requisita alunos por data de nascimento com paginação: permite inserir data de nascimento como padrão de busca de todos. Bem como faz uso de paginação customizada ou padrão.  
 
+* GET - /alunos/v1/consultar/{id}
 
+- Requisita um aluno: busca um aluno pelo atributo ID e há resposta padronizada em caso de ID inexistente.
+
+* POST - /alunos/v1/cadastrar
+
+- Efetua o cadastro de aluno na base de dados. E os dados a serem inseridos passam por validação, como, por exemplo, validação de CPF, entre outros.
+
+* PUT - /alunos/v1/atualizar/{id}
+
+- Efetua a atualização cadastral, por meio do ID, de um aluno presente na base de dados. Também há resposta padronizada para IDs inexistentes.
+
+* DELETE - /alunos/v1/deletar/{id}
+
+- Remove um aluno, por meio do ID, da base de dados. Também há resposta padronizada para IDs inexistentes.
 
