@@ -35,6 +35,20 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 * Banco de Dados: H2 em desenvolvimento e PostgreSql em produção;
 * IDE e outras ferramentas: NetBeans, Maven, Postman, Swagger/OpenAPI e GitHub;
 
+### Motivação por Java:
+* Java é uma linguagem de programação e uma plataforma de desenvolvimento de software. O qual permite desenvolver software para desktop, mobile, web e para diversos eletrônicos (televisões, eletrodomésticos, cartões bancários e naves espaciais);
+* Portabilidade - rodam em qualquer sistema operacional e em qualquer hardware;
+* Tipagem Estática - fornece maior segurança ao código;
+* Multi-threaded - capacidade de suportar processamentos múltiplos;
+* Gratuidade - linguagem e ambientes de produção gratuitos;
+* Internacionalização - suporta nativamente caracteres Unicode;
+* Multiparadigma;
+* Vasta biblioteca de rotinas e APIs
+* A máquina virtual Java roda diversas outras linguagens;
+* Mercado amplo e aquecido;
+* Variedade de frameworks;
+* Comunidade atuante na confecção de materiais de estudo, palestras, eventos e cursos;
+
 ## 4 - ENDPOINTS
 
 ### Verbos e Endpoints
