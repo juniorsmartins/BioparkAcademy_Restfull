@@ -216,12 +216,12 @@ Testes para consultar Matrículas:
 
 ## 11. LICENÇA
 
-- Nome: GPLv3
-- URL: https://www.gnu.org/licences/gpl-3.0.html
+Nome: GPLv3 </br>
+URL: https://www.gnu.org/licences/gpl-3.0.html
 
 ## 12. CONTATOS
 
-- Autor: Junior Martins
-- LinkedIn: https://www.linkedin.com/in/juniorsmartins/
+Autor: Junior Martins </br>
+LinkedIn: https://www.linkedin.com/in/juniorsmartins/
 
 
