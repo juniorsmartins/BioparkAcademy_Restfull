@@ -2,6 +2,7 @@ package br.com.bioparkacademy.control.dto;
 
 import br.com.bioparkacademy.model.Aluno;
 import br.com.bioparkacademy.model.StatusMatricula;
+import java.time.LocalDateTime;
 import org.springframework.data.domain.Page;
 
 /**
@@ -14,6 +15,7 @@ public class AlunoDtoOut
     private String nome;
     private String cpf;
     private String dataNascimento;
+    private LocalDateTime dataCadastro;
     private StatusMatricula statusMatricula;
 
     // -------------------- CONSTRUTORES -------------------- //
@@ -23,6 +25,7 @@ public class AlunoDtoOut
         nome = aluno.getNome();
         cpf = aluno.getCpf();
         dataNascimento = aluno.getDataNascimento();
+        dataCadastro = aluno.getDataCadastro();
         statusMatricula = aluno.getStatusMatricula();
     }
     
@@ -39,6 +42,8 @@ public class AlunoDtoOut
     {return cpf;}
     public String getDataNascimento() 
     {return dataNascimento;}
+    public LocalDateTime getDataCadastro()
+    {return dataCadastro;}
     public StatusMatricula getStatusMatricula() 
     {return statusMatricula;}
 

@@ -2,7 +2,6 @@ package br.com.bioparkacademy.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -32,7 +31,8 @@ public class Aluno implements Serializable
     @Column
     private String dataNascimento;
     @Column
-    private LocalDateTime dataCriacao = LocalDateTime.now();
+    private LocalDateTime dataCadastro = LocalDateTime.now();
+    
     @Enumerated(EnumType.STRING)
     private StatusMatricula statusMatricula = StatusMatricula.NAO_MATRICULADO;
     
@@ -62,10 +62,10 @@ public class Aluno implements Serializable
     {return dataNascimento;}
     public void setDataNascimento(String dataNascimento) 
     {this.dataNascimento = dataNascimento;}
-    public LocalDateTime getDataCriacao() 
-    {return dataCriacao;}
-    public void setDataCriacao(LocalDateTime dataCriacao) 
-    {this.dataCriacao = dataCriacao;}
+    public LocalDateTime getDataCadastro() 
+    {return dataCadastro;}
+    public void setDataCadastro(LocalDateTime dataCadastro) 
+    {this.dataCadastro = dataCadastro;}
     public StatusMatricula getStatusMatricula() 
     {return statusMatricula;}
     public void setStatusMatricula(StatusMatricula statusMatricula) 
