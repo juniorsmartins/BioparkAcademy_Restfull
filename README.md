@@ -10,8 +10,8 @@ Para mais informações sobre o Biopark: https://www.biopark.com.br/
 
 * 1 - Síntese;
 * 2 - Requisitos Mínimos;
-* 3 - Tecnologia;
-* 4 - DER;
+* 3 - Tecnologias;
+* 4 - Endpoints;
 
 ## 1 - SÍNTESE
 
@@ -33,9 +33,17 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 * Linguagem de programação: Java;
 * Framework: Spring (Boot, Web, Data Jpa, Validation, Cache e DevTools);
 * Banco de Dados: H2 em desenvolvimento e PostgreSql em produção;
-* IDE e outros: NetBeans, Maven, Postman, Swagger/SpringFox e GitHub;
+* IDE e outras ferramentas: NetBeans, Maven, Postman, Swagger/OpenAPI e GitHub;
 
-## DER
+## 4 - ENDPOINTS
+
+### Verbos e Endpoints
+
+* GET - /alunos/v1/consultar
+* GET - /alunos/v1/consultar/{id}
+* POST - /alunos/v1/cadastrar
+* PUT - /alunos/v1/atualizar/{id}
+* DELETE - /alunos/v1/deletar/{id}
 
 
 
