@@ -17,6 +17,8 @@ Para mais informações sobre o Biopark: https://www.biopark.com.br/
 7. Data Transfer Object - DTO;
 8. Database;
 9. Guia de teste;
+10. Licença;
+11. Contatos.
 
 ## 1. SÍNTESE
 
@@ -140,28 +142,28 @@ Os DTOs são um padrão usado para transportar dados entre subsistemas de um sof
 
 ## 9. GUIA DE TESTE
 
-1. 
-2. 
+1. Clone o projeto em sua IDE;
+2. Use os dados abaixo para testar no Postman;
 
 Testes para consultar Alunos:
 - GET - http://localhost:8080/alunos/v1/consultar
 - GET - http://localhost:8080/alunos/v1/consultar?page=1&size=4&sort=id,asc
 - GET - http://localhost:8080/alunos/v1/consultar/2
 - POST - http://localhost:8080/alunos/v1/cadastrar
-var useEsteJson = 
-{
-    "nome":"Manoel Calabrim",
-    "cpf":"109.415.110-65",
-    "dataNascimento":"1999/02/13"
-}
+<p>{</br>
+    "nome":"Manoel Calabrim",</br>
+    "cpf":"109.415.110-65",</br>
+    "dataNascimento":"1999/02/13"</br>
+}</br></p>
+
 Testar para atualizar Alunos:
 - PUT - http://localhost:8080/alunos/v1/atualizar/15
-var useEsteJson =
-{
-    "nome":"Pablo Avatar",
-    "cpf":"102.423.590-43",
-    "dataNascimento":"2004/01/21"
-}
+<p>{</br>
+    "nome":"Carlos Valar",</br>
+    "cpf":"102.423.590-43",</br>
+    "dataNascimento":"2004/01/21"</br>
+}</br></p>
+
 Testar para apagar Alunos:
 - DELETE - http://localhost:8080/alunos/v1/deletar/15
 
@@ -173,10 +175,14 @@ Testes para consultar Matrículas:
 - GET - http://localhost:8080/matriculas/v1/consultar
 - GET - http://localhost:8080/matriculas/v1/consultar?page=1&size=2&sort=id,asc
 
+## 10. LICENÇA
 
+Nome: GPLv3
+URL: https://www.gnu.org/licences/gpl-3.0.html
 
+## 11. CONTATOS
 
-
-
+Autor: Junior Martins
+LinkedIn: https://www.linkedin.com/in/juniorsmartins/
 
 
