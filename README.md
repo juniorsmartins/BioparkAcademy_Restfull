@@ -105,13 +105,13 @@ Consulta matrículas com paginação: retorna todas as matrículas por paginaç�
 
 ## 5. DIAGRAMA ENTIDADE-RELACIONAMENTO - DER
 
-### Modelo conceitual
+### Modelo Conceitual
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/64662590/145690139-36c583bf-84aa-4ca4-8e90-0995059c33b8.png" width="700" />
 </div>
 
-### Modelo lógico
+### Modelo Lógico
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/64662590/145690340-66f7c92e-2f0b-443c-b989-3814b222d1c8.png" width="700" />
