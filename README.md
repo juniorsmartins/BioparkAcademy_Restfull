@@ -144,7 +144,7 @@ Os DTOs são um padrão usado para transportar dados entre subsistemas de um sof
 ## 9. BASE DE DADOS
 
 Foi criada uma base de dados no arquivo data.sql. Para realizar os testes necessários com o Postman. E o SQL é o seguinte:
-
+~~~
 INSERT INTO ALUNOS(nome, cpf, data_nascimento, data_cadastro) VALUES('Maria Santana', '509.361.220-05', '2000/01/05', '2021-12-11T09:57:25.8375059');
 INSERT INTO ALUNOS(nome, cpf, data_nascimento, data_cadastro) VALUES('Agenor Munder', '083.483.040-02', '1990/08/17', '2019-10-11T09:57:25.8375059');
 INSERT INTO ALUNOS(nome, cpf, data_nascimento, data_cadastro) VALUES('Frank Belone', '102.843.980-63', '2004/05/08', '2020-08-11T09:57:25.8375059');
@@ -175,6 +175,7 @@ INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES
 INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES('2-9-1122021', '2021-02-11T09:57:25.8375059', 2, 9);
 INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES('3-12-1122021', '2021-02-11T09:57:25.8375059', 3, 12);
 INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES('2-4-1122021', '2021-02-11T09:57:25.8375059', 2, 4);
+~~~
 
 ## 10. GUIA DE TESTE
 
@@ -186,20 +187,22 @@ Testes para consultar Alunos:
 - GET - http://localhost:8080/alunos/v1/consultar?page=1&size=4&sort=id,asc
 - GET - http://localhost:8080/alunos/v1/consultar/2
 - POST - http://localhost:8080/alunos/v1/cadastrar
-<p>{</br>
+~~~
+{
     "nome":"Manoel Calabrim",</br>
     "cpf":"109.415.110-65",</br>
     "dataNascimento":"1999/02/13"</br>
-}</br></p>
-
+}
+~~~
 Testar para atualizar Alunos:
 - PUT - http://localhost:8080/alunos/v1/atualizar/15
-<p>{</br>
+~~~
+{
     "nome":"Carlos Valar",</br>
     "cpf":"102.423.590-43",</br>
     "dataNascimento":"2004/01/21"</br>
-}</br></p>
-
+}
+~~~
 Testar para apagar Alunos:
 - DELETE - http://localhost:8080/alunos/v1/deletar/15
 
