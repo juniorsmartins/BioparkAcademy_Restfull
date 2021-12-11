@@ -2,11 +2,13 @@ package br.com.bioparkacademy.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -30,6 +32,9 @@ public class Aluno implements Serializable
     private String dataNascimento;
     @Column
     private LocalDateTime dataCadastro = LocalDateTime.now();
+    
+    @OneToMany(mappedBy = "aluno")
+    private List<Matricula> listaMatriculas;
    
     // -------------------- CONSTRUTORES -------------------- //
     public Aluno(){}
@@ -61,6 +66,10 @@ public class Aluno implements Serializable
     {return dataCadastro;}
     public void setDataCadastro(LocalDateTime dataCadastro) 
     {this.dataCadastro = dataCadastro;}
+    public List<Matricula> getListaMatriculas() 
+    {return listaMatriculas;}
+    public void setListaMatriculas(List<Matricula> listaMatriculas) 
+    {this.listaMatriculas = listaMatriculas;}
   
     
     

@@ -1,11 +1,13 @@
 package br.com.bioparkacademy.model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -25,16 +27,16 @@ public class Curso implements Serializable
     private String nome;
     @Column
     private int cargaHoraria;
-    @Column
-    private double preco;
+    
+    @OneToMany(mappedBy = "curso")
+    private List<Matricula> listaMatriculas;
     
     // -------------------- CONSTRUTORES -------------------- //
     public Curso(){}
-    public Curso(String nome, int cargaHoraria, double preco) 
+    public Curso(String nome, int cargaHoraria) 
     {
         this.nome = nome;
         this.cargaHoraria = cargaHoraria;
-        this.preco = preco;
     }
     
     // -------------------- MÉTODOS DE ACESSO E MODIFICAÇÃO -------------------- //
@@ -50,10 +52,13 @@ public class Curso implements Serializable
     {return cargaHoraria;}
     public void setCargaHoraria(int cargaHoraria) 
     {this.cargaHoraria = cargaHoraria;}
-    public double getPreco() 
-    {return preco;}
-    public void setPreco(double preco) 
-    {this.preco = preco;}
+    public List<Matricula> getListaMatriculas() 
+    {return listaMatriculas;}
+    public void setListaMatriculas(List<Matricula> listaMatriculas) 
+    {this.listaMatriculas = listaMatriculas;}
+    
+    
+    
     
 
 }

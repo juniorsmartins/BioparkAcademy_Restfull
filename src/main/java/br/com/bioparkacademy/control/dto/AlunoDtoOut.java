@@ -1,7 +1,9 @@
 package br.com.bioparkacademy.control.dto;
 
 import br.com.bioparkacademy.model.Aluno;
+import br.com.bioparkacademy.model.Matricula;
 import java.time.LocalDateTime;
+import java.util.List;
 import org.springframework.data.domain.Page;
 
 /**
@@ -15,7 +17,7 @@ public class AlunoDtoOut
     private String cpf;
     private String dataNascimento;
     private LocalDateTime dataCadastro;
-
+ 
     // -------------------- CONSTRUTORES -------------------- //
     public AlunoDtoOut(Aluno aluno)
     {   // De fato, a conversao de Aluno em AlunoDto ocorre aqui no construtor
@@ -51,7 +53,10 @@ public class AlunoDtoOut
     {this.dataNascimento = dataNascimento;}
     public void setDataCadastro(LocalDateTime dataCadastro) 
     {this.dataCadastro = dataCadastro;}
-
+     
+    
+    
+    
     
 }
 

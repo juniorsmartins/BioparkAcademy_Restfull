@@ -12,7 +12,6 @@ public class CursoDtoOut
     private Long id;
     private String nome;
     private int cargaHoraria;
-    private double preco;
     
     // -------------------- CONSTRUTORES -------------------- //
     public CursoDtoOut(Curso curso)
@@ -20,7 +19,6 @@ public class CursoDtoOut
         id = curso.getId();
         nome = curso.getNome();
         cargaHoraria = curso.getCargaHoraria();
-        preco = curso.getPreco();
     }
     
     // -------------------- MÉTODOS AUXILIARES -------------------- //
@@ -40,10 +38,9 @@ public class CursoDtoOut
     {return cargaHoraria;}
     public void setCargaHoraria(int cargaHoraria) 
     {this.cargaHoraria = cargaHoraria;}
-    public double getPreco() 
-    {return preco;}
-    public void setPreco(double preco) 
-    {this.preco = preco;}
+    
+    
+    
     
     
 }

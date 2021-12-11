@@ -21,8 +21,20 @@ INSERT INTO ALUNOS(nome, cpf, data_nascimento, data_cadastro) VALUES('Marcia Cos
 INSERT INTO ALUNOS(nome, cpf, data_nascimento, data_cadastro) VALUES('Elisabeth Ginger', '561.705.860-60', '2006/05/25', '2019-09-11T09:57:25.8375059');
 INSERT INTO ALUNOS(nome, cpf, data_nascimento, data_cadastro) VALUES('Vinicius Abricate', '398.863.790-49', '2001/03/12', '2014-08-11T09:57:25.8375059');
 
-INSERT INTO CURSOS(nome, carga_horaria, preco) VALUES('Java', 1700 , 4500.50);
-INSERT INTO CURSOS(nome, carga_horaria, preco) VALUES('Spring Framework', 800 , 2350.82);
-INSERT INTO CURSOS(nome, carga_horaria, preco) VALUES('Jakarta 9', 980 , 3425.18);
-INSERT INTO CURSOS(nome, carga_horaria, preco) VALUES('API Rest', 1050 , 3800.45);
-INSERT INTO CURSOS(nome, carga_horaria, preco) VALUES('Database', 1100 , 4000.57);
+INSERT INTO CURSOS(nome, carga_horaria) VALUES('Java', 1700);
+INSERT INTO CURSOS(nome, carga_horaria) VALUES('Spring Framework', 1250);
+INSERT INTO CURSOS(nome, carga_horaria) VALUES('Jakarta 9', 980);
+INSERT INTO CURSOS(nome, carga_horaria) VALUES('API Rest', 1050);
+INSERT INTO CURSOS(nome, carga_horaria) VALUES('Database', 1100);
+
+INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES('1-6-1122021', '2021-02-11T09:57:25.8375059', 1, 6);
+INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES('5-15-1122021', '2021-02-11T09:57:25.8375059', 5, 15);
+INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES('4-1-1122021', '2021-02-11T09:57:25.8375059', 4, 1);
+INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES('2-9-1122021', '2021-02-11T09:57:25.8375059', 2, 9);
+INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES('3-12-1122021', '2021-02-11T09:57:25.8375059', 3, 12);
+INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES('2-4-1122021', '2021-02-11T09:57:25.8375059', 2, 4);
+
+
+
+
+
