@@ -6,7 +6,7 @@ Este projeto consiste em atender os requisitos estabelecidos por um desafio prá
 
 Para mais informações sobre o Biopark: https://www.biopark.com.br/ 
 
-## ÍNDICE
+# ÍNDICE
 
 1. Síntese;
 2. Requisitos Mínimos;
