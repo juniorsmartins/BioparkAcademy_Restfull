@@ -28,14 +28,14 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 * Envio: o desafio deve ser enviado preferencialmente como repositório Git público (Github, Gitlab ou Bitbucket), com commits pequenos e bem descritos. Ou enviado como arquivo compactado (Zip ou Tar);
 * O repositório deve estar com modelo de licença de código aberto.
 
-## 3 - TECNOLOGIA
+## 3 - TECNOLOGIAS
 
 * Linguagem de programação: Java;
 * Framework: Spring (Boot, Web, Data Jpa, Validation, Cache e DevTools);
 * Banco de Dados: H2 em desenvolvimento e PostgreSql em produção;
-* IDE e outros: NetBeans, Postman, Swagger e GitHub;
+* IDE e outros: NetBeans, Maven, Postman, Swagger/SpringFox e GitHub;
 
-## 
+## DER
 
 
 
