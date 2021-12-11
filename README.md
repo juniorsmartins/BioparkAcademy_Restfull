@@ -55,9 +55,10 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 - Mundialmente popular;
 - Comunidade atuante na confecção de materiais de estudo, palestras, eventos e cursos;
 
-## 4. CONTROLLER E ENDPOINTS
+## 4. CONTROLLERS E ENDPOINTS
 
 - AlunoController: todos os endpoints foram construídos dentro da classe de controle de Aluno. Neste caso, do 'desafio tech', por uma questão de praticidade e simplicidade, optei por não criar uma camada de serviços para abarcar as lógicas e relações com a infraestrutura (database). Logo, mantive tudo centralizado na camada de controlle.
+- CursoController: possui um endpoint para consulta dos cursos presentes na base de dados de teste.
 
 ### Verbos e Endpoints
 
@@ -66,6 +67,7 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 - POST - /alunos/v1/cadastrar
 - PUT - /alunos/v1/atualizar/{id}
 - DELETE - /alunos/v1/deletar/{id}
+- GET - /cursos/v1/consultar
 
 ### Descritivos
 
@@ -90,14 +92,20 @@ Efetua a atualização cadastral, por meio do ID, de um aluno presente na base d
 
 Remove um aluno, por meio do ID, da base de dados. Também há resposta padronizada para IDs inexistentes.
 
+- GET - /cursos/v1/consultar
+
+Requisita cursos com paginação: retorna todos os alunos por paginação customizada ou padrão. Você pode inserir os detalhes de paginação ou, no caso de não inserir, retornará todos os cursos paginados pela paginação padrão (pré-definida no código). 
+
 ## 5. ENTIDADES
 
 - Aluno: id, nome, CPF, dataNascimento, dataCadastro e statusMatricula;
+- Curso: id, nome, cargaHoraria e preco;
 
 ## 6. DATA TRANSFER OBJECT - DTO
 
 - AlunoDtoIn:
 - AlunoDtoOut:
+- CursoDtoOut:
 
 ## 7. DATABASE
 
