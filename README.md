@@ -61,7 +61,7 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 * PUT - /alunos/v1/atualizar/{id}
 * DELETE - /alunos/v1/deletar/{id}
 
-### Descritivos dos Endpoints
+### Descritivos
 
 * GET - /alunos/v1/consultar
 
