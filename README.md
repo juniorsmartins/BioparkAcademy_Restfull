@@ -137,5 +137,43 @@ Os DTOs são um padrão usado para transportar dados entre subsistemas de um sof
 - H2: utilizei banco de dados em memória para todo o processo de desenvolvimento da API Rest.
 - PostgreSQL: incluído apenas na fase final do desenvolvimento.
 
+## 9. GUIA DE COMO TESTAR
+
+1. 
+2. 
+
+Testes para consultar Alunos:
+- GET - http://localhost:8080/alunos/v1/consultar
+- GET - http://localhost:8080/alunos/v1/consultar?page=1&size=4&sort=id,asc
+- GET - http://localhost:8080/alunos/v1/consultar/2
+- POST - http://localhost:8080/alunos/v1/cadastrar
+{
+    "nome":"Manoel Calabrim",
+    "cpf":"109.415.110-65",
+    "dataNascimento":"1999/02/13"
+}
+Testar para atualizar Alunos:
+- PUT - http://localhost:8080/alunos/v1/atualizar/15
+{
+    "nome":"Pablo Avatar",
+    "cpf":"102.423.590-43",
+    "dataNascimento":"2004/01/21"
+}
+Testar para apagar Alunos:
+- DELETE - http://localhost:8080/alunos/v1/deletar/15
+
+Testes para consultar Cursos:
+- GET - http://localhost:8080/cursos/v1/consultar
+- GET - http://localhost:8080/cursos/v1/consultar?page=1&size=2&sort=id,asc
+
+Testes para consultar Matrículas:
+- GET - http://localhost:8080/matriculas/v1/consultar
+- GET - http://localhost:8080/matriculas/v1/consultar?page=1&size=2&sort=id,asc
+
+
+
+
+
+
 
 
