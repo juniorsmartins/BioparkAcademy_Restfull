@@ -12,9 +12,10 @@ Para mais informações sobre o Biopark: https://www.biopark.com.br/
 2. Requisitos Mínimos;
 3. Tecnologias;
 4. Controller e Endpoints;
-5. Entidades;
-6. Data Transfer Object - DTO;
-7. Database;
+5. Diagrama Entidade-Relacionamento - DER;
+6. Entidades;
+7. Data Transfer Object - DTO;
+8. Database;
 
 ## 1. SÍNTESE
 
@@ -58,7 +59,8 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 ## 4. CONTROLLERS E ENDPOINTS
 
 - AlunoController: todos os endpoints foram construídos dentro da classe de controle de Aluno. Neste caso, do 'desafio tech', por uma questão de praticidade e simplicidade, optei por não criar uma camada de serviços para abarcar as lógicas e relações com a infraestrutura (database). Logo, mantive tudo centralizado na camada de controlle.
-- CursoController: possui um endpoint para consulta dos cursos presentes na base de dados de teste.
+- CursoController: possui um endpoint para consultar os cursos presentes na base de dados.
+- MatriculaController: possui um endpoint para consultar as matrículas registradas na base de dados.
 
 ### Verbos e Endpoints
 
@@ -68,6 +70,7 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 - PUT - /alunos/v1/atualizar/{id}
 - DELETE - /alunos/v1/deletar/{id}
 - GET - /cursos/v1/consultar
+- GET - /matriculas/v1/consultar
 
 ### Descritivos
 
@@ -96,21 +99,37 @@ Remove um aluno, por meio do ID, da base de dados. Também há resposta padroniz
 
 Requisita cursos com paginação: retorna todos os alunos por paginação customizada ou padrão. Você pode inserir os detalhes de paginação ou, no caso de não inserir, retornará todos os cursos paginados pela paginação padrão (pré-definida no código). 
 
-## 5. ENTIDADES
+- GET - /matriculas/v1/consultar
+
+Consulta matrículas com paginação: retorna todas as matrículas por paginação customizada ou padrão. Retorna apenas as matrículas sem lista de alunos e cursos.
+
+## 5. DIAGRAMA ENTIDADE-RELACIONAMENTO - DER
+
+### Modelo conceitual
+
+
+
+### Modelo lógico
+
+
+
+## 6. ENTIDADES
 
 - Aluno: id, nome, CPF, dataNascimento, dataCadastro e statusMatricula;
 - Curso: id, nome, cargaHoraria e preco;
+- Matricula: id, numMatricula, dataMatricula, curso e aluno;
 
-## 6. DATA TRANSFER OBJECT - DTO
+## 7. DATA TRANSFER OBJECT - DTO
 
 - AlunoDtoIn:
 - AlunoDtoOut:
 - CursoDtoOut:
+- MatriculaDtoOut: 
 
-## 7. DATABASE
+## 8. DATABASE
 
-- H2: 
-- PostgreSQL: 
+- H2: utilizei banco de dados em memória para todo o processo de desenvolvimento da API Rest.
+- PostgreSQL: incluído apenas na fase final do desenvolvimento.
 
 
 
