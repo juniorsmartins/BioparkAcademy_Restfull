@@ -125,10 +125,12 @@ Consulta matrículas com paginação: retorna todas as matrículas por paginaç�
 
 ## 7. DATA TRANSFER OBJECT - DTO
 
-- AlunoDtoIn:
-- AlunoDtoOut:
-- CursoDtoOut:
-- MatriculaDtoOut: 
+Os DTOs são um padrão usado para transportar dados entre subsistemas de um software. São objetos simples, sem qualquer comportamento ou lógica de negócio. E, neste caso, foram criados dois tipos de DTOs, os DTOs de entrada (in) e os DTOs de saída de dados (out).
+
+- AlunoDtoIn: usado para transferir informações do consumer/formulário para a API/base de dados.
+- AlunoDtoOut: usado para recuperar informações da base de dados para o consumer.
+- CursoDtoOut: usado para recuperar informações da base de dados para o consumer.
+- MatriculaDtoOut: usado para recuperar informações da base de dados para o consumer.
 
 ## 8. DATABASE
 
