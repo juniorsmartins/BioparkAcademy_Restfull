@@ -13,7 +13,7 @@ Para mais informações sobre o Biopark: https://www.biopark.com.br/
 3. Tecnologias;
 4. Diagrama Entidade-Relacionamento - DER;
 5. Unified Modeling Language - UML
-6. Controller e Endpoints;
+6. Controllers e Endpoints;
 7. Entidades;
 8. Data Transfer Object - DTO;
 9. Database;
