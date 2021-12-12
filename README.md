@@ -152,7 +152,7 @@ Os DTOs são um padrão usado para transportar dados entre subsistemas de um sof
 
 ## 10. BASE DE DADOS
 
-Foi criada uma base de dados no arquivo data.sql. Para realizar os testes necessários com o Postman. E o SQL é o seguinte:
+Foi criada uma base de dados no arquivo data.sql. Para realizar os testes necessários com o Swagger/OpenAPI e ou Postman. E o SQL é o seguinte:
 ~~~
 INSERT INTO ALUNOS(nome, cpf, data_nascimento, data_cadastro) VALUES('Maria Santana', '509.361.220-05', '2000/01/05', '2021-12-11T09:57:25.8375059');
 INSERT INTO ALUNOS(nome, cpf, data_nascimento, data_cadastro) VALUES('Agenor Munder', '083.483.040-02', '1990/08/17', '2019-10-11T09:57:25.8375059');
