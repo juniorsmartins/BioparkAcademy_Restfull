@@ -24,7 +24,7 @@ Para mais informações sobre o Biopark: https://www.biopark.com.br/
 
 ## 1. SÍNTESE
 
-Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de programação e desenvolvimento e, além disso, conhecer o estilo de trabalho do candidato a trainee do Biopark. Assim, solicita a construção do primeiro ‘sprint’ de um sistema de gestão acadêmica. Portanto, determina os seguintes termos:
+A prova prática, chamada de “Desafio Tech”, visa testar as habilidades de programação e desenvolvimento e, além disso, conhecer o estilo de trabalho do candidato a trainee do Biopark. Assim, solicita a construção do primeiro ‘sprint’ de um sistema de gestão acadêmica. Portanto, determina os seguintes termos:
 
 ## 2. REQUISITOS MÍNIMOS
 
@@ -42,7 +42,7 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 - Linguagem de programação: Java;
 - Framework: Spring (Boot, Web, Data Jpa, Validation, Cache e DevTools);
 - Banco de Dados: H2 em desenvolvimento e PostgreSql em produção;
-- IDE e outras ferramentas: NetBeans, Maven, Postman, Swagger/OpenAPI e GitHub;
+- IDE e outras ferramentas: NetBeans, Maven, Postman, Swagger/OpenAPI, BrModelo, Astah e GitHub;
 
 ### Motivação por Java:
 
@@ -56,7 +56,7 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 - Multiparadigma;
 - Vasta biblioteca de rotinas e APIs;
 - Variedade de frameworks;
-- A máquina virtual Java roda diversas outras linguagens;
+- A máquina virtual Java (JVM) roda diversas outras linguagens;
 - Mercado amplo e aquecido;
 - Mundialmente popular;
 - Comunidade atuante na confecção de materiais de estudo, palestras, eventos e cursos;
@@ -91,7 +91,7 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 
 ## 6. CONTROLLERS E ENDPOINTS
 
-- AlunoController: todos os endpoints foram construídos dentro da classe de controle de Aluno. Neste caso, do 'desafio tech', por uma questão de praticidade e simplicidade, optei por não criar uma camada de serviços para abarcar as lógicas e relações com a infraestrutura (database). Logo, mantive tudo centralizado na camada de controlle.
+- AlunoController: cinco endpoints foram construídos dentro da classe de controle de Aluno. Neste caso, do 'desafio tech', por uma questão de praticidade e simplicidade, optei por não criar uma camada de serviços para abarcar as lógicas e relações com a infraestrutura (database). Logo, mantive tudo centralizado na camada de controlle. Porém, se necessário, isso pode ser refatorado.
 - CursoController: possui um endpoint para consultar os cursos presentes na base de dados.
 - MatriculaController: possui um endpoint para consultar as matrículas registradas na base de dados.
 
@@ -109,8 +109,7 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 
 - GET - /alunos/v1/consultar
 
-Requisita alunos com paginação: retorna todos os alunos por paginação customizada ou padrão. Você pode inserir os detalhes de paginação ou, no caso de não inserir, retornará todos os alunos paginados pela paginação padrão (pré-definida no código). 
-Requisita alunos por data de nascimento com paginação: permite inserir data de nascimento como padrão de busca de todos. Bem como faz uso de paginação customizada ou padrão.  
+Requisita alunos com paginação: retorna todos os alunos por paginação customizada ou padrão. Você pode inserir os detalhes de paginação ou, no caso de não inserir, retornará todos os alunos paginados pela paginação padrão (pré-definida no código). Também há a possibilidade de requisitar alunos por data de nascimento com paginação: permite inserir data de nascimento como padrão de busca.  
 
 - GET - /alunos/v1/consultar/{id}
 
@@ -130,21 +129,21 @@ Remove um aluno, por meio do ID, da base de dados. Também há resposta padroniz
 
 - GET - /cursos/v1/consultar
 
-Requisita cursos com paginação: retorna todos os alunos por paginação customizada ou padrão. Você pode inserir os detalhes de paginação ou, no caso de não inserir, retornará todos os cursos paginados pela paginação padrão (pré-definida no código). 
+Requisita cursos com paginação: retorna todos os cursos por paginação customizada ou padrão. Você pode inserir os detalhes de paginação ou, no caso de não inserir, retornará todos os cursos paginados pela paginação padrão (pré-definida no código). 
 
 - GET - /matriculas/v1/consultar
 
-Consulta matrículas com paginação: retorna todas as matrículas por paginação customizada ou padrão. Retorna apenas as matrículas sem lista de alunos e cursos.
+Consulta matrículas com paginação: retorna todas as matrículas por paginação customizada ou padrão. Retorna as matrículas sem os respectivos alunos e cursos.
 
 ## 7. ENTIDADES
 
-- Aluno: id, nome, CPF, dataNascimento, dataCadastro e statusMatricula;
+- Aluno: id, nome, cpf, dataNascimento, dataCadastro e statusMatricula;
 - Curso: id, nome, cargaHoraria e preco;
 - Matricula: id, numMatricula, dataMatricula, curso e aluno;
 
 ## 8. DATA TRANSFER OBJECT - DTO
 
-Os DTOs são um padrão usado para transportar dados entre subsistemas de um software. São objetos simples, sem qualquer comportamento ou lógica de negócio. E, neste caso, foram criados dois tipos de DTOs, os DTOs de entrada (in) e os DTOs de saída de dados (out).
+Os DTOs são um padrão usado para transportar dados entre subsistemas de um software. São objetos simples e, geralmente, sem comportamento ou lógica de negócio. E, neste caso do BioparkAcademy, foram criados dois tipos de DTOs, os DTOs de entrada (in) e os DTOs de saída de dados (out). Os DTOs de entrada auxiliam no transporte de dados para dentro do sistema e os DTOs de saída auxiliam no transporte para fora do sistema.
 
 - AlunoDtoIn: usado para transferir informações do consumer/formulário para a API/base de dados.
 - AlunoDtoOut: usado para recuperar informações da base de dados para o consumer.
@@ -198,7 +197,7 @@ A API Rest pode ser testada de duas formas: pelo Swagger/OpenAPI e pelo Postman;
 
 1. Clone o projeto em sua IDE;
 2. Dê Run no projeto;
-3. Use os dados abaixo para testar no OpenAPI (http://localhost:8080/swagger-ui.html) ou no Postman;
+3. Use os dados abaixo para testar no OpenAPI (http://localhost:8080/swagger-ui.html) ou no Postman. Minha preferência é pelo uso do Postman;
 
 Testes para consultar Alunos:
 - GET - http://localhost:8080/alunos/v1/consultar
