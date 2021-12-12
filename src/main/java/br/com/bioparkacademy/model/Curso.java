@@ -57,10 +57,6 @@ public class Curso implements Serializable
     public void setListaMatriculas(List<Matricula> listaMatriculas) 
     {this.listaMatriculas = listaMatriculas;}
     
-    
-    
-    
-
 }
 
 

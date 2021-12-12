@@ -34,6 +34,9 @@ public class CursoController
         Page<Curso> cursos = cursoRepository.findAll(paginacao);
         return CursoDtoOut.converter(cursos);
     }
-
     
 }
+
+
+
+

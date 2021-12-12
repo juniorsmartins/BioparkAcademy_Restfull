@@ -65,8 +65,9 @@ public class Matricula implements Serializable
     {return aluno;}
     public void setAluno(Aluno aluno) 
     {this.aluno = aluno;}
-    
-    
-    
-    
+        
 }
+
+
+
+

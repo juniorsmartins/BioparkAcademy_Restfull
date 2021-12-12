@@ -1,9 +1,7 @@
 package br.com.bioparkacademy.control.dto;
 
 import br.com.bioparkacademy.model.Aluno;
-import br.com.bioparkacademy.model.Matricula;
 import java.time.LocalDateTime;
-import java.util.List;
 import org.springframework.data.domain.Page;
 
 /**
@@ -54,10 +52,6 @@ public class AlunoDtoOut
     public void setDataCadastro(LocalDateTime dataCadastro) 
     {this.dataCadastro = dataCadastro;}
      
-    
-    
-    
-    
 }
 
 

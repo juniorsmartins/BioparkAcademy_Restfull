@@ -1,7 +1,5 @@
 package br.com.bioparkacademy.control.dto;
 
-import br.com.bioparkacademy.model.Aluno;
-import br.com.bioparkacademy.model.Curso;
 import br.com.bioparkacademy.model.Matricula;
 import java.time.LocalDateTime;
 import org.springframework.data.domain.Page;
@@ -39,10 +37,10 @@ public class MatriculaDtoOut
     {return dataMatricula;}
     public void setDataMatricula(LocalDateTime dataMatricula) 
     {this.dataMatricula = dataMatricula;}
-
-    
-    
-    
-    
-    
+   
 }
+
+
+
+
+

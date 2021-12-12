@@ -71,9 +71,7 @@ public class Aluno implements Serializable
     {return listaMatriculas;}
     public void setListaMatriculas(List<Matricula> listaMatriculas) 
     {this.listaMatriculas = listaMatriculas;}
-  
-    
-    
+      
 }
 
 

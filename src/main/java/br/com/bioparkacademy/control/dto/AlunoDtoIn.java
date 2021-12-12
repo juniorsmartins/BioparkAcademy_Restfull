@@ -14,10 +14,8 @@ public class AlunoDtoIn
     // -------------------- ATRIBUTOS DE INSTÂNCIA -------------------- //
     @NotNull @NotEmpty @Size(min = 3, max = 150)
     private String nome;
-
     @CPF
     private String cpf;
-
     @NotNull @NotEmpty @Size(max = 10)
     private String dataNascimento;
     
@@ -46,8 +44,6 @@ public class AlunoDtoIn
     {return dataNascimento;}
     public void setDataNascimento(String dataNascimento) 
     {this.dataNascimento = dataNascimento;}
-    
-
     
 }
 

@@ -38,9 +38,9 @@ public class CursoDtoOut
     {return cargaHoraria;}
     public void setCargaHoraria(int cargaHoraria) 
     {this.cargaHoraria = cargaHoraria;}
-    
-    
-    
-    
-    
+        
 }
+
+
+
+

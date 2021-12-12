@@ -1,10 +1,7 @@
 package br.com.bioparkacademy.control;
 
-import br.com.bioparkacademy.control.dto.CursoDtoOut;
 import br.com.bioparkacademy.control.dto.MatriculaDtoOut;
-import br.com.bioparkacademy.model.Curso;
 import br.com.bioparkacademy.model.Matricula;
-import br.com.bioparkacademy.repository.CursoRepository;
 import br.com.bioparkacademy.repository.MatriculaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -38,3 +35,7 @@ public class MatriculaController
         return MatriculaDtoOut.converter(matriculas);
     }
 }
+
+
+
+
