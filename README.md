@@ -11,15 +11,16 @@ Para mais informações sobre o Biopark: https://www.biopark.com.br/
 1. Síntese;
 2. Requisitos Mínimos;
 3. Tecnologias;
-4. Controller e Endpoints;
-5. Diagrama Entidade-Relacionamento - DER;
-6. Entidades;
-7. Data Transfer Object - DTO;
-8. Database;
-9. Base de dados;
-10. Guia de teste;
-11. Licença;
-12. Contatos.
+4. Diagrama Entidade-Relacionamento - DER;
+5. Unified Modeling Language - UML
+6. Controller e Endpoints;
+7. Entidades;
+8. Data Transfer Object - DTO;
+9. Database;
+10. Base de dados;
+11. Guia de teste;
+12. Licença;
+13. Contatos.
 
 ## 1. SÍNTESE
 
@@ -60,7 +61,27 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 - Mundialmente popular;
 - Comunidade atuante na confecção de materiais de estudo, palestras, eventos e cursos;
 
-## 4. CONTROLLERS E ENDPOINTS
+## 4. DIAGRAMA ENTIDADE-RELACIONAMENTO - DER
+
+### Modelo Conceitual
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/64662590/145690139-36c583bf-84aa-4ca4-8e90-0995059c33b8.png" width="700" />
+</div>
+
+### Modelo Lógico
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/64662590/145690340-66f7c92e-2f0b-443c-b989-3814b222d1c8.png" width="700" />
+</div>
+
+## 5. UNIFIED MODELING LANGUAGE - UML
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/64662590/145696031-1d3f68a8-c4f1-4338-8f62-9af25b410b0c.png" width="700" />
+</div>
+
+## 6. CONTROLLERS E ENDPOINTS
 
 - AlunoController: todos os endpoints foram construídos dentro da classe de controle de Aluno. Neste caso, do 'desafio tech', por uma questão de praticidade e simplicidade, optei por não criar uma camada de serviços para abarcar as lógicas e relações com a infraestrutura (database). Logo, mantive tudo centralizado na camada de controlle.
 - CursoController: possui um endpoint para consultar os cursos presentes na base de dados.
@@ -107,27 +128,13 @@ Requisita cursos com paginação: retorna todos os alunos por paginação custom
 
 Consulta matrículas com paginação: retorna todas as matrículas por paginação customizada ou padrão. Retorna apenas as matrículas sem lista de alunos e cursos.
 
-## 5. DIAGRAMA ENTIDADE-RELACIONAMENTO - DER
-
-### Modelo Conceitual
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/64662590/145690139-36c583bf-84aa-4ca4-8e90-0995059c33b8.png" width="700" />
-</div>
-
-### Modelo Lógico
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/64662590/145690340-66f7c92e-2f0b-443c-b989-3814b222d1c8.png" width="700" />
-</div>
-
-## 6. ENTIDADES
+## 7. ENTIDADES
 
 - Aluno: id, nome, CPF, dataNascimento, dataCadastro e statusMatricula;
 - Curso: id, nome, cargaHoraria e preco;
 - Matricula: id, numMatricula, dataMatricula, curso e aluno;
 
-## 7. DATA TRANSFER OBJECT - DTO
+## 8. DATA TRANSFER OBJECT - DTO
 
 Os DTOs são um padrão usado para transportar dados entre subsistemas de um software. São objetos simples, sem qualquer comportamento ou lógica de negócio. E, neste caso, foram criados dois tipos de DTOs, os DTOs de entrada (in) e os DTOs de saída de dados (out).
 
@@ -136,12 +143,12 @@ Os DTOs são um padrão usado para transportar dados entre subsistemas de um sof
 - CursoDtoOut: usado para recuperar informações da base de dados para o consumer.
 - MatriculaDtoOut: usado para recuperar informações da base de dados para o consumer.
 
-## 8. DATABASE
+## 9. DATABASE
 
 - H2: utilizei banco de dados em memória para todo o processo de desenvolvimento da API Rest.
 - PostgreSQL: incluído apenas na fase final do desenvolvimento.
 
-## 9. BASE DE DADOS
+## 10. BASE DE DADOS
 
 Foi criada uma base de dados no arquivo data.sql. Para realizar os testes necessários com o Postman. E o SQL é o seguinte:
 ~~~
@@ -177,7 +184,7 @@ INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES
 INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES('2-4-1122021', '2021-02-11T09:57:25.8375059', 2, 4);
 ~~~
 
-## 10. GUIA DE TESTE
+## 11. GUIA DE TESTE
 
 A API Rest pode ser testada de duas formas: pelo Swagger/OpenAPI e pelo Postman;
 
@@ -217,12 +224,12 @@ Testes para consultar Matrículas:
 - GET - http://localhost:8080/matriculas/v1/consultar
 - GET - http://localhost:8080/matriculas/v1/consultar?page=1&size=2&sort=id,asc
 
-## 11. LICENÇA
+## 12. LICENÇA
 
 Nome: GPLv3 </br>
 URL: https://www.gnu.org/licences/gpl-3.0.html
 
-## 12. CONTATOS
+## 13. CONTATOS
 
 Autor: Junior Martins </br>
 LinkedIn: https://www.linkedin.com/in/juniorsmartins/
