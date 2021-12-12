@@ -80,13 +80,13 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 ### Caso de Uso
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/64662590/145696031-1d3f68a8-c4f1-4338-8f62-9af25b410b0c.png" width="700" />
+  <img src="https://user-images.githubusercontent.com/64662590/145696031-1d3f68a8-c4f1-4338-8f62-9af25b410b0c.png" width="800" />
 </div>
 
 ### Diagrama de Classe
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/64662590/145709950-16974a13-1d32-4f17-9b91-eee8480c71ed.png" width="700" />
+  <img src="https://user-images.githubusercontent.com/64662590/145709950-16974a13-1d32-4f17-9b91-eee8480c71ed.png" width="800" />
 </div>
 
 ## 6. CONTROLLERS E ENDPOINTS
