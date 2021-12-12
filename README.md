@@ -83,6 +83,12 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
   <img src="https://user-images.githubusercontent.com/64662590/145696031-1d3f68a8-c4f1-4338-8f62-9af25b410b0c.png" width="700" />
 </div>
 
+### Diagrama de Classe
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/64662590/145709950-16974a13-1d32-4f17-9b91-eee8480c71ed.png" width="700" />
+</div>
+
 ## 6. CONTROLLERS E ENDPOINTS
 
 - AlunoController: todos os endpoints foram construídos dentro da classe de controle de Aluno. Neste caso, do 'desafio tech', por uma questão de praticidade e simplicidade, optei por não criar uma camada de serviços para abarcar as lógicas e relações com a infraestrutura (database). Logo, mantive tudo centralizado na camada de controlle.
@@ -201,18 +207,18 @@ Testes para consultar Alunos:
 - POST - http://localhost:8080/alunos/v1/cadastrar
 ~~~
 {
-    "nome":"Manoel Calabrim",</br>
-    "cpf":"109.415.110-65",</br>
-    "dataNascimento":"1999/02/13"</br>
+    "nome":"Manoel Calabrim",
+    "cpf":"109.415.110-65",
+    "dataNascimento":"1999/02/13"
 }
 ~~~
 Testar para atualizar Alunos:
 - PUT - http://localhost:8080/alunos/v1/atualizar/15
 ~~~
 {
-    "nome":"Carlos Valar",</br>
-    "cpf":"102.423.590-43",</br>
-    "dataNascimento":"2004/01/21"</br>
+    "nome":"Carlos Valar",
+    "cpf":"102.423.590-43",
+    "dataNascimento":"2004/01/21"
 }
 ~~~
 Testar para apagar Alunos:
