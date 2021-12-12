@@ -236,6 +236,8 @@ Testes para consultar Alunos:
 - GET - http://localhost:8080/alunos/v1/consultar
 - GET - http://localhost:8080/alunos/v1/consultar?page=1&size=4&sort=id,asc
 - GET - http://localhost:8080/alunos/v1/consultar/2
+
+Teste para cadastrar Aluno:
 - POST - http://localhost:8080/alunos/v1/cadastrar
 ~~~
 {
@@ -244,7 +246,7 @@ Testes para consultar Alunos:
     "dataNascimento":"1999/02/13"
 }
 ~~~
-Testar para atualizar Alunos:
+Testa para atualizar Aluno:
 - PUT - http://localhost:8080/alunos/v1/atualizar/15
 ~~~
 {
