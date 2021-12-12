@@ -77,6 +77,8 @@ Chamado de “Desafio Tech”, a prova prática visa testar as habilidades de pr
 
 ## 5. UNIFIED MODELING LANGUAGE - UML
 
+### Caso de Uso
+
 <div align="center">
   <img src="https://user-images.githubusercontent.com/64662590/145696031-1d3f68a8-c4f1-4338-8f62-9af25b410b0c.png" width="700" />
 </div>
