@@ -230,7 +230,7 @@ A API Rest pode ser testada de duas formas: pelo Swagger/OpenAPI e pelo Postman;
 1. Clone o projeto em sua IDE;
 2. Prefira o database h2 para os testes (a configuração está na sessão de database). Caso contrário, precisará inserir a base de dados no PostgreSQL;
 3. Dê Run no projeto;
-4. Use os dados abaixo para testar no OpenAPI (http://localhost:8080/swagger-ui.html) ou no Postman (https://www.postman.com/). Minha preferência é pelo uso do Postman;
+4. Use os dados abaixo para testar no Postman (https://www.postman.com/) ou no OpenAPI (http://localhost:8080/swagger-ui.html). Tenha preferência por testar no Postman, pois não deu muito certo no OpenAPI. Fico devendo para a próxima uma melhor documentação e testes no OpenAPI. 
 
 Testes para consultar Alunos:
 - GET - http://localhost:8080/alunos/v1/consultar
