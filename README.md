@@ -225,12 +225,12 @@ INSERT INTO MATRICULAS(num_matricula, data_matricula, curso_id, aluno_id) VALUES
 
 ## 11. GUIA DE TESTE
 
-A API Rest pode ser testada de duas formas: pelo Swagger/OpenAPI e pelo Postman;
+A API Rest pode ser testada de duas formas: pelo Postman(recomendado) e pelo Swagger/OpenAPI;
 
 1. Clone o projeto em sua IDE;
 2. Prefira o database h2 para os testes (a configuração está na sessão de database). Caso contrário, precisará inserir a base de dados no PostgreSQL;
 3. Dê Run no projeto;
-4. Use os dados abaixo para testar no Postman (https://www.postman.com/) ou no OpenAPI (http://localhost:8080/swagger-ui.html). Tenha preferência por testar no Postman, pois não deu muito certo no OpenAPI. Fico devendo para a próxima uma melhor documentação e testes no OpenAPI. 
+4. Use os dados abaixo para testar no Postman (https://www.postman.com/) ou no OpenAPI (http://localhost:8080/swagger-ui.html). Recomenda-se testar no Postman, pois ficou incompleto o processo no OpenAPI.
 
 Testes para consultar Alunos:
 - GET - http://localhost:8080/alunos/v1/consultar
